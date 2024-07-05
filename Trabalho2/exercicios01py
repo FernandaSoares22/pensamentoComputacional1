@@ -1,0 +1,20 @@
+def gerar_intervalo_incrementado(n, i):
+    if n < 0 or i <= 0:
+        return []  
+    resultado = []
+    valor_atual = 0
+    while valor_atual <= n:
+        resultado.append(valor_atual)
+        valor_atual += i
+    return resultado
+
+def main():
+    n = int(input("Digite o valor do limite superior (N): "))
+    i = int(input("Digite o valor do incremento (i): "))
+    if n >= 0 and i > 0:
+        resultado = gerar_intervalo_incrementado(n, i)
+        print("Os valores gerados são:", resultado)
+    else:
+        print("Valores de entrada inválidos. N deve ser um inteiro positivo e i deve ser maior que 0.")
+
+main()
